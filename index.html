@@ -34,7 +34,12 @@
                 <li><a href="#profile">Profile</a></li>
             </ul>
         </div>
-    </nav>
+    
+<div class="hamburger" onclick="toggleMenu()">
+    ☰
+</div>
+
+</nav>
 
     <!-- Main Content -->
     <div class="container">
@@ -312,6 +317,12 @@
                 card.style.transform = 'translateY(0) scale(1)';
             });
         });
-    </script>
+    
+function toggleMenu() {
+    const navList = document.querySelector('.nav ul');
+    navList.classList.toggle('active');
+}
+
+</script>
 </body>
 </html>
