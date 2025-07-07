@@ -580,3 +580,72 @@
                 transform: translateY(0);
             }
         }
+
+/* Global image fix */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 1rem;
+    }
+
+    .profile-table td, .profile-table th {
+        overflow-wrap: anywhere;
+    }
+
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(15, 15, 35, 0.95);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        z-index: 999;
+    }
+
+    .nav ul.active {
+        display: flex;
+    }
+}
+
+/* Fix font clamp */
+.hero h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Additional tweaks for small devices */
+@media (max-width: 480px) {
+    .profile-table {
+        padding: 1rem;
+    }
+
+    .benefit-card p,
+    .spec-card p {
+        font-size: 0.95rem;
+    }
+
+    .nav a {
+        font-size: 1rem;
+    }
+}
